@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <app-header></app-header>
+      <app-dropzone></app-dropzone>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Dropzone from './components/Dropzone'
+import Header from './components/layout/header.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    appDropzone: Dropzone,
+    appHeader: Header
   }
 }
 </script>
@@ -19,10 +23,7 @@ export default {
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #F3F4F5;
 }
 </style>
