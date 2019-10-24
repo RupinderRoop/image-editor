@@ -1,21 +1,24 @@
 <template>
   <div id="app">
+    <app-header></app-header>
     <div class="container">
-      <app-header></app-header>
       <app-dropzone></app-dropzone>
     </div>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import Dropzone from './components/Dropzone'
 import Header from './components/layout/header.vue'
+import Footer from './components/layout/footer.vue'
 
 export default {
   name: 'app',
   components: {
     appDropzone: Dropzone,
-    appHeader: Header
+    appHeader: Header,
+    appFooter: Footer
   }
 }
 </script>
